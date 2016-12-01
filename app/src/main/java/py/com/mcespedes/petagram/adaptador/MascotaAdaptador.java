@@ -1,7 +1,6 @@
-package py.com.mcespedes.petagram;
+package py.com.mcespedes.petagram.adaptador;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import py.com.mcespedes.petagram.pojo.Mascota;
+import py.com.mcespedes.petagram.R;
 
 /**
  * Created by root on 22/11/16.

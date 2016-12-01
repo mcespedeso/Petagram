@@ -1,4 +1,4 @@
-package py.com.mcespedes.petagram;
+package py.com.mcespedes.petagram.pojo;
 
 /**
  * Created by root on 22/11/16.

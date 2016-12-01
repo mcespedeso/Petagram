@@ -1,4 +1,4 @@
-package py.com.mcespedes.petagram;
+package py.com.mcespedes.petagram.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+
+import py.com.mcespedes.petagram.R;
+import py.com.mcespedes.petagram.adaptador.MascotaAdaptador;
+import py.com.mcespedes.petagram.pojo.Mascota;
 
 public class FavoritosMascota extends AppCompatActivity {
 

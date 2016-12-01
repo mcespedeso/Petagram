@@ -3,7 +3,7 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="py.com.mcespedes.petagram.FavoritosMascota"
+tools:context="py.com.mcespedes.petagram.activity.FavoritosMascota"
 android:background="@color/colorPrimary">
 
 <include android:id="@+id/miActionBar"

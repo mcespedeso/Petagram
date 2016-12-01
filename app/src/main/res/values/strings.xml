@@ -9,4 +9,15 @@
     <string name="ppunto">5</string>
     <string name="misfavoritos">Mis Favoritos</string>
     <string name="cardtitle">Animal</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acercade">Acerca de</string>
+    <string name="nombre_contacto">Nombre</string>
+    <string name="correo_contacto">Correo</string>
+    <string name="mensaje_contacto">Mensaje</string>
+    <string name="btn_enviar_mensaje">Enviar Mensaje</string>
+    <string name="biografia">Marcos Céspedes - Developer</string>
+    <string name="textRank">3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
