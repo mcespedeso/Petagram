@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import py.com.mcespedes.petagram.db.ConstructorMascotas;
 import py.com.mcespedes.petagram.pojo.Mascota;
 import py.com.mcespedes.petagram.R;
 
@@ -63,7 +64,12 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
             @Override
             public void onClick(View v) {
 
-                mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()+1));
+                ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
+                constructorMascotas.darLike(mascota);
+                mascotaViewHolder.tvPunto.setText(String.valueOf(constructorMascotas.obtenerLikes(mascota)));
+
+                //mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()+1));
+
                 Snackbar.make(v, "Has agregado a "+mascota.getNombre()+" a favoritos", Snackbar.LENGTH_LONG)
                         .setAction(v.getResources().getString(R.string.texto_accion), new View.OnClickListener() {
                             @Override
