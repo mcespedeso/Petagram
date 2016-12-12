@@ -89,6 +89,7 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
         private TextView tvNomnreCV;
         private ImageButton btnLike;
         private TextView tvPunto;
+        private ImageButton btLike;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
@@ -96,6 +97,7 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
             tvNomnreCV      = (TextView) itemView.findViewById(R.id.tvNombreCV);
             btnLike         = (ImageButton) itemView.findViewById(R.id.btnLike);
             tvPunto         = (TextView) itemView.findViewById(R.id.tvPunto);
+            btLike          = (ImageButton)itemView.findViewById(R.id.btnLike);
         }
 
     }

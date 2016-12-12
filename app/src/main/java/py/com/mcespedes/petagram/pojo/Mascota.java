@@ -6,6 +6,7 @@ package py.com.mcespedes.petagram.pojo;
 
 public class Mascota {
 
+    private int id;
     private String nombre;
     private int imagen;
     private int likes;
@@ -14,6 +15,22 @@ public class Mascota {
         this.nombre = nombre;
         this.imagen = imagen;
         this.likes = likes;
+    }
+
+    public Mascota(){
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getNombre() {
