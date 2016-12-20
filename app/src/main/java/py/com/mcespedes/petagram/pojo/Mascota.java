@@ -6,12 +6,31 @@ package py.com.mcespedes.petagram.pojo;
 
 public class Mascota {
 
-    private int id;
+    private String id;
     private String nombre;
-    private int imagen;
+    private String imagen;
     private int likes;
 
-    public Mascota(String nombre, int imagen, int likes) {
+    private String urlProfilePicture;
+    private String fullNameProfile;
+
+    public String getFullNameProfile() {
+        return fullNameProfile;
+    }
+
+    public void setFullNameProfile(String fullNameProfile) {
+        this.fullNameProfile = fullNameProfile;
+    }
+
+    public String getUrlProfilePicture() {
+        return urlProfilePicture;
+    }
+
+    public void setUrlProfilePicture(String urlProfilePicture) {
+        this.urlProfilePicture = urlProfilePicture;
+    }
+
+    public Mascota(String nombre, String imagen, int likes) {
         this.nombre = nombre;
         this.imagen = imagen;
         this.likes = likes;
@@ -21,11 +40,11 @@ public class Mascota {
 
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -37,11 +56,11 @@ public class Mascota {
         return nombre;
     }
 
-    public int getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 

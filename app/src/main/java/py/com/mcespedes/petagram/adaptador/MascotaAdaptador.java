@@ -47,7 +47,7 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
     @Override
     public void onBindViewHolder(final MascotaViewHolder mascotaViewHolder, int position) {
         final Mascota mascota = mascotas.get(position);
-        mascotaViewHolder.imgFoto.setImageResource(mascota.getImagen());
+        //mascotaViewHolder.imgFoto.setImageResource(mascota.getImagen());
         mascotaViewHolder.tvNomnreCV.setText(mascota.getNombre());
         mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()));
 

@@ -12,7 +12,9 @@ import py.com.mcespedes.petagram.pojo.Mascota;
 public interface IReciclerViewfragmentView {
 
     public void generarLineaLayoutVertical();
-    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> contactos);
+
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas);
+
     public void inicializarAdaptadorRV(MascotaAdaptador adapatador);
 
 

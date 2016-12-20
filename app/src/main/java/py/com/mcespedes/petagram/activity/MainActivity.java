@@ -93,6 +93,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(this, AcercaDeActivity.class);
                 startActivity(i);
                 break;
+            case R.id.mConfCuenta:
+                Intent iCuenta = new Intent(this, ConfigurarCuentaActivity.class);
+                startActivity(iCuenta);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

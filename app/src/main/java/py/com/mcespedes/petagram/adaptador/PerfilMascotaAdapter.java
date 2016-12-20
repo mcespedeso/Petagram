@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import py.com.mcespedes.petagram.R;
@@ -32,8 +34,15 @@ public class PerfilMascotaAdapter extends RecyclerView.Adapter<PerfilMascotaAdap
     @Override
     public void onBindViewHolder(PerfilMascotaAdapterViewHolder holder, int position) {
         Mascota mascota =  mascotas.get(position);
-        holder.imgFoto.setImageResource(mascota.getImagen());
-//        holder.tvRank.setText(mascota.getRank());
+
+        Picasso.with(activity)
+                .load(mascota.getImagen())
+                .placeholder(R.drawable.clipartrootwerler)
+                .into(holder.imgFoto);
+
+        //holder.imgFoto.setImageResource(mascota.getImagen());
+
+        holder.tvRank.setText(String.valueOf(mascota.getLikes()));
     }
 
     @Override

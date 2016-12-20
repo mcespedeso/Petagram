@@ -20,6 +20,7 @@ android:orientation="vertical">
     app:civ_shadow_color="#8BC34A"/>
 
 <TextView
+    android:id="@+id/tvNombrePerfil"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="General"
