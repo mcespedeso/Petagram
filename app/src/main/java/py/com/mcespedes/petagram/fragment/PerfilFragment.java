@@ -89,7 +89,7 @@ public class PerfilFragment extends Fragment {
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Gson gsonMediaRecent = restApiAdapter.construyeGsonDeserializadorMediaRecent();
         EndpointsApi endpointsApi = restApiAdapter.establecerConexionRestApiInstagram(gsonMediaRecent);
-        Call<MascotaResponse> contactoResponseCall = endpointsApi.getRecentMedia();
+        Call<MascotaResponse> contactoResponseCall = endpointsApi.getRecentMediaUserByID();
 
         contactoResponseCall.enqueue(new Callback<MascotaResponse>() {
             @Override

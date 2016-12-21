@@ -11,6 +11,9 @@ import retrofit2.http.GET;
 public interface EndpointsApi {
 
     @GET(ConstantesRestApi.URL_GET_RECENT_MEDIA_USER_BY_ID)
-    Call<MascotaResponse> getRecentMedia();
+    Call<MascotaResponse> getRecentMediaUserByID();
+
+    @GET(ConstantesRestApi.URL_GET_USER_DATA_BY_USER_NAME)
+    Call<MascotaResponse> getUserDataByUserName();
 
 }

@@ -28,12 +28,14 @@ public final class ConstantesRestApi {
 
     public static  final String URL_GET_RECENT_MEDIA_USER = KEY_GET_RECENT_MEDIA_USER_SELF + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
+    public static  final String URL_GET_USER_DATA_BY_USER_NAME = KEY_GET_RECENT_MEDIA_USER_SELF + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
+
 
     //access to user media recent by ID
     //https://api.instagram.com/v1/users/{user-id}/media/recent/?access_token=ACCESS-TOKEN
 
     //JAIME ID
-    public static final String KEY_JAFERR_91_ID = "2294207961";
+    public static final String KEY_JAFERR_91_ID = "4263898228";
 
     public static final String KEY_GET_RECENT_MEDIA_USER_BY_ID = "users/"+KEY_JAFERR_91_ID+"/media/recent";
 
