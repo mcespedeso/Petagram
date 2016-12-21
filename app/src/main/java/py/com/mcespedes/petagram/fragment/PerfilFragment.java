@@ -70,6 +70,8 @@ public class PerfilFragment extends Fragment {
 
         imagCircular = (CircularImageView) v.findViewById(R.id.imagCircular);
 
+        tvNombrePerfil = (TextView) v.findViewById(R.id.tvNombrePerfil);
+
         //obtenerUserDataByUserName();
 
         obtenerMediosRecientesByID();
@@ -120,7 +122,6 @@ public class PerfilFragment extends Fragment {
         mascotas.add(new Mascota("animal_2", R.drawable.animal_2,6));
         mascotas.add(new Mascota("animal_5", R.drawable.animal_5,1));
         mascotas.add(new Mascota("animal_4", R.drawable.animal_4,3));*/
-
     }
 
     public void inicializarAdaptador(){
@@ -130,12 +131,10 @@ public class PerfilFragment extends Fragment {
 
     }
 
-
-
     private void setProfilePicture() {
 
         String img="";
-        String nombrePerfil;
+        String nombrePerfil="";
 
         for (int i = 0 ; i < mascotas.size(); i++ ) {
 
@@ -143,7 +142,7 @@ public class PerfilFragment extends Fragment {
 
             img = mascota.getUrlProfilePicture();
             System.out.println("el url es: " + img);
-            nombrePerfil = mascota.getFullNameProfile();
+            nombrePerfil = mascota.getNombre();
 
             break;
 
@@ -153,6 +152,8 @@ public class PerfilFragment extends Fragment {
                 .load(img)
                 .placeholder(R.drawable.clipartrootwerler)
                 .into(imagCircular);
+
+        tvNombrePerfil.setText(nombrePerfil);
 
     }
 
