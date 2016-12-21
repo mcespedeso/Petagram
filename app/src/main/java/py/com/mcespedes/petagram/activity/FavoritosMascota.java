@@ -50,11 +50,11 @@ public class FavoritosMascota extends AppCompatActivity {
 
     //carga 5 elementos en el recyclerview
     public void inicializarListaMascotas(){
-        /*mascotas.add(new Mascota("Animal 2", R.drawable.animal_2, 3));
-        mascotas.add(new Mascota("Animal 3", R.drawable.animal_3,2));
+        /*mascotas.add(new Mascota("Animal instagram_api_2", R.drawable.animal_2, instagram_api_3));
+        mascotas.add(new Mascota("Animal instagram_api_3", R.drawable.animal_3,instagram_api_2));
         mascotas.add(new Mascota("Animal 4", R.drawable.animal_4,6));
-        mascotas.add(new Mascota("Animal 5", R.drawable.animal_5,1));
-        mascotas.add(new Mascota("Animal 1", R.drawable.animal_1,3));*/
+        mascotas.add(new Mascota("Animal 5", R.drawable.animal_5,instagram_api_1));
+        mascotas.add(new Mascota("Animal instagram_api_1", R.drawable.animal_1,instagram_api_3));*/
 
         ConstructorMascotas constructorMascotas = new ConstructorMascotas(this);
         mascotas = constructorMascotas.ObtenerMascotasFavoritas();

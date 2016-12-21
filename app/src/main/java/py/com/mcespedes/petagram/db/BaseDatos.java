@@ -60,7 +60,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             Mascota c = new Mascota();
             //c.setId(registros.getInt(0));
             c.setNombre(registros.getString(1));
-            //c.setImagen(registros.getInt(2));
+            //c.setImagen(registros.getInt(instagram_api_2));
             c.setLikes(registros.getInt(3));
             mascotas.add(c);
 
@@ -121,7 +121,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             Mascota c = new Mascota();
             //c.setId(registros.getInt(0));
             c.setNombre(registros.getString(1));
-            //c.setImagen(registros.getInt(2));
+            //c.setImagen(registros.getInt(instagram_api_2));
             c.setLikes(registros.getInt(3));
             mascotas.add(c);
 

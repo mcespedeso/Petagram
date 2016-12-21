@@ -68,7 +68,7 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
                 constructorMascotas.darLike(mascota);
                 mascotaViewHolder.tvPunto.setText(String.valueOf(constructorMascotas.obtenerLikes(mascota)));
 
-                //mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()+1));
+                //mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()+instagram_api_1));
 
                 Snackbar.make(v, "Has agregado a "+mascota.getNombre()+" a favoritos", Snackbar.LENGTH_LONG)
                         .setAction(v.getResources().getString(R.string.texto_accion), new View.OnClickListener() {

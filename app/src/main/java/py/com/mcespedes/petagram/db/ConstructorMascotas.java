@@ -14,7 +14,7 @@ import py.com.mcespedes.petagram.pojo.Mascota;
 
 public class ConstructorMascotas {
 
-    private static final int LIKE = 1;
+    private static final int LIKE = instagram_api_1;
     private Context context;
 
     public ConstructorMascotas(Context context) {
@@ -32,15 +32,15 @@ public class ConstructorMascotas {
     public void insertarContactos(BaseDatos db){
 
         ContentValues contentValues =  new ContentValues();
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NOMBRE , "Animal 1");
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NUMERO_LIKES , 1);
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NOMBRE , "Animal instagram_api_1");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NUMERO_LIKES , instagram_api_1);
         contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_FOTO , R.drawable.animal_1);
 
         db.insertarMascota(contentValues);
 
         contentValues =  new ContentValues();
 
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NOMBRE , "Animal 2");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NOMBRE , "Animal instagram_api_2");
         contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NUMERO_LIKES , 0);
         contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_FOTO , R.drawable.animal_2);
 
@@ -48,7 +48,7 @@ public class ConstructorMascotas {
 
         contentValues =  new ContentValues();
 
-        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NOMBRE , "Animal 3");
+        contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NOMBRE , "Animal instagram_api_3");
         contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_NUMERO_LIKES , 0);
         contentValues.put(ConstantesBaseDatos.TABLE_MASCOTA_FOTO , R.drawable.animal_3);
 
