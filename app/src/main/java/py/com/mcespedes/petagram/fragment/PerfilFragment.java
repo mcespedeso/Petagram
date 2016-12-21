@@ -112,16 +112,16 @@ public class PerfilFragment extends Fragment {
 
     //carga 5 elementos en el recyclerview
     public void inicializarListaMascotas(){
-        /*mascotas.add(new Mascota("animal_2", R.drawable.animal_2, instagram_api_3));
-        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,instagram_api_2));
+        /*mascotas.add(new Mascota("animal_2", R.drawable.animal_2, 3));
+        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,2));
         mascotas.add(new Mascota("animal_2", R.drawable.animal_2,6));
         mascotas.add(new Mascota("animal_5", R.drawable.animal_5,instagram_api_1));
-        mascotas.add(new Mascota("animal_4", R.drawable.animal_4,instagram_api_3));
-        mascotas.add(new Mascota("animal_2", R.drawable.animal_2, instagram_api_3));
-        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,instagram_api_2));
+        mascotas.add(new Mascota("animal_4", R.drawable.animal_4,3));
+        mascotas.add(new Mascota("animal_2", R.drawable.animal_2, 3));
+        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,2));
         mascotas.add(new Mascota("animal_2", R.drawable.animal_2,6));
         mascotas.add(new Mascota("animal_5", R.drawable.animal_5,instagram_api_1));
-        mascotas.add(new Mascota("animal_4", R.drawable.animal_4,instagram_api_3));*/
+        mascotas.add(new Mascota("animal_4", R.drawable.animal_4,3));*/
     }
 
     public void inicializarAdaptador(){

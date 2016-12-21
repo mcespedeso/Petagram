@@ -81,8 +81,8 @@ public class RecyclerViewFragment extends Fragment implements  IReciclerViewfrag
     /*public void inicializarListaDeMascotas(){
         mascotas = new ArrayList<Mascota>();
         mascotas.add(new Mascota("Animal instagram_api_1", R.drawable.animal_1,0));
-        mascotas.add(new Mascota("Animal instagram_api_2", R.drawable.animal_2,0));
-        mascotas.add(new Mascota("Animal instagram_api_3", R.drawable.animal_3,0));
+        mascotas.add(new Mascota("Animal 2", R.drawable.animal_2,0));
+        mascotas.add(new Mascota("Animal 3", R.drawable.animal_3,0));
         mascotas.add(new Mascota("Animal 4", R.drawable.animal_4,0));
         mascotas.add(new Mascota("Animal 5", R.drawable.animal_5,0));
     }*/
