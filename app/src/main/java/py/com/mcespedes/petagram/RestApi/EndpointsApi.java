@@ -18,7 +18,7 @@ public interface EndpointsApi {
     Call<MascotaResponse> getRecentMediaUserByID();
 
     @GET(ConstantesRestApi.URL_GET_USER_DATA_BY_USER_NAME)
-    Call<MascotaResponse> getUserDataByUserName();
+    Call<MascotaResponse> getUserDataByUserName(@Field("user_name") String userName);
 
     @FormUrlEncoded
     @POST(ConstantesRestApi.KEY_POST_HEROKU_ID_TOKEN)

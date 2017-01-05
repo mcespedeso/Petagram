@@ -92,7 +92,7 @@ public class GuardarUsuarioInstagramActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-
+                Log.d("ERROR " , t.getMessage().toString());
             }
         });
 
