@@ -24,4 +24,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recibirNotificaciones">Recibir Notificaciones</string>
+    <string name="btn_obtener_id">Obtener ID Token</string>
+    <string name="btn_guardar_cuenta_instagram">Guardar Cuenta Instagram</string>
 </resources>

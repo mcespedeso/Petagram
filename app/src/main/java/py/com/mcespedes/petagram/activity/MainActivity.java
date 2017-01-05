@@ -97,6 +97,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent iCuenta = new Intent(this, ConfigurarCuentaActivity.class);
                 startActivity(iCuenta);
                 break;
+            case R.id.mRecivNotif:
+                Intent notif = new Intent(this, GuardarUsuarioInstagramActivity.class);
+                startActivity(notif);
+                //Toast.makeText(this, "Ya puedes recibir notificaciones !!!", Toast.LENGTH_LONG).show();
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }

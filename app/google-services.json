@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "696685597842",
+    "firebase_url": "https://petagram1-92b39.firebaseio.com",
+    "project_id": "petagram1-92b39",
+    "storage_bucket": "petagram1-92b39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696685597842:android:709f4b33dbb961d6",
+        "android_client_info": {
+          "package_name": "py.com.mcespedes.miscontactos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696685597842-kn529tlflbiv6o2joq9s551rpc9umkog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "py.com.mcespedes.miscontactos",
+            "certificate_hash": "C85587CCC4FD197BE7AF2833B03AB76BDA2836D9"
+          }
+        },
+        {
+          "client_id": "696685597842-lhaf0fklgh8kd02as3uhv6vvimfqpcs4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPm27Mjn-dOCBf6b4VVE8ytuSCyJmfzzE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696685597842-lhaf0fklgh8kd02as3uhv6vvimfqpcs4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

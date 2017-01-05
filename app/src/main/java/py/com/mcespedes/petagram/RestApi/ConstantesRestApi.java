@@ -42,4 +42,13 @@ public final class ConstantesRestApi {
     public static final String URL_GET_RECENT_MEDIA_USER_BY_ID = KEY_GET_RECENT_MEDIA_USER_BY_ID + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
 
+    //INSTAGRAM USER REGISTER AND TOKEN ID
+
+    public static final String ROOT_HEROKU_URL = "https://young-refuge-13563.herokuapp.com";
+
+    public static final String KEY_POST_USER_INSTAGRAM = "registrar-usuario/";
+
+    public static final String KEY_POST_HEROKU_ID_TOKEN = "token-device/";
+
+
 }

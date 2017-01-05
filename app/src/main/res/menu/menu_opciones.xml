@@ -19,4 +19,10 @@
         >
     </item>
 
+    <item android:id="@+id/mRecivNotif"
+        android:title="@string/recibirNotificaciones"
+        android:orderInCategory="101"
+        >
+    </item>
+
 </menu>
