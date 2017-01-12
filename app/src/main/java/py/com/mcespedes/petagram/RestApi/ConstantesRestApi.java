@@ -1,11 +1,5 @@
 package py.com.mcespedes.petagram.RestApi;
 
-import android.content.SharedPreferences;
-
-import py.com.mcespedes.petagram.RestApi.model.JsonKeys;
-
-import static android.content.Context.MODE_PRIVATE;
-
 /**
  * Created by mcespedes on 19/12/16.
  */
@@ -41,6 +35,11 @@ public final class ConstantesRestApi {
 
     public static final String URL_GET_RECENT_MEDIA_USER_BY_ID = KEY_GET_RECENT_MEDIA_USER_BY_ID + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
+    public static final String KEY_POST_MEDIA_ID_LIKES = "media/%s/likes";
+
+    //%s
+
+    public static final String URL_POST_MEDIA_ID_LIKES = KEY_POST_MEDIA_ID_LIKES + KEY_ACCESS_TOKEN + ACCESS_TOKEN; ;
 
     //INSTAGRAM USER REGISTER AND TOKEN ID
 
@@ -49,6 +48,9 @@ public final class ConstantesRestApi {
     public static final String KEY_POST_USER_INSTAGRAM = "registrar-usuario/";
 
     public static final String KEY_POST_HEROKU_ID_TOKEN = "token-device/";
+
+    public static final String KEY_POST_HEROKU_MEDIA_LIKE = "like-media/";
+
 
 
 }

@@ -28,4 +28,12 @@ public interface EndpointsApi {
     @POST(ConstantesRestApi.KEY_POST_USER_INSTAGRAM)
     Call<String> registrarUsuarioInstagram(@Field("token") String token, @Field("user_instagram") String user_instagram);
 
+    //endpoint like de foto timeline
+    @FormUrlEncoded
+    @POST(ConstantesRestApi.KEY_POST_HEROKU_MEDIA_LIKE)
+    Call<String> setLikePhoto(@Field("id_dispositivo") String id_dispositivo,
+                              @Field("id_foto_instagram") String id_foto_instagram,
+                              @Field("id_usuario_instagram") String id_usuario_instagram);
+
+
 }

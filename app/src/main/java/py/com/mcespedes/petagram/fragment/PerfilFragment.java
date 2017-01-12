@@ -45,8 +45,7 @@ public class PerfilFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.fragment_perfil, container, false);
@@ -72,14 +71,7 @@ public class PerfilFragment extends Fragment {
 
         tvNombrePerfil = (TextView) v.findViewById(R.id.tvNombrePerfil);
 
-        //obtenerUserDataByUserName();
-
         obtenerMediosRecientesByID();
-
-        //inicializarListaMascotas();
-
-        //inicializarAdaptador();
-
 
         return v;
 
@@ -108,20 +100,6 @@ public class PerfilFragment extends Fragment {
 
         });
 
-    }
-
-    //carga 5 elementos en el recyclerview
-    public void inicializarListaMascotas(){
-        /*mascotas.add(new Mascota("animal_2", R.drawable.animal_2, 3));
-        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,2));
-        mascotas.add(new Mascota("animal_2", R.drawable.animal_2,6));
-        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,instagram_api_1));
-        mascotas.add(new Mascota("animal_4", R.drawable.animal_4,3));
-        mascotas.add(new Mascota("animal_2", R.drawable.animal_2, 3));
-        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,2));
-        mascotas.add(new Mascota("animal_2", R.drawable.animal_2,6));
-        mascotas.add(new Mascota("animal_5", R.drawable.animal_5,instagram_api_1));
-        mascotas.add(new Mascota("animal_4", R.drawable.animal_4,3));*/
     }
 
     public void inicializarAdaptador(){

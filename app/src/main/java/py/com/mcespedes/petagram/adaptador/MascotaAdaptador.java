@@ -3,18 +3,30 @@ package py.com.mcespedes.petagram.adaptador;
 import android.app.Activity;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import py.com.mcespedes.petagram.RestApi.ConstantesRestApi;
+import py.com.mcespedes.petagram.RestApi.EndpointsApi;
+import py.com.mcespedes.petagram.RestApi.adapter.RestApiAdapter;
+import py.com.mcespedes.petagram.RestApi.model.UsuarioResponse;
 import py.com.mcespedes.petagram.db.ConstructorMascotas;
 import py.com.mcespedes.petagram.pojo.Mascota;
 import py.com.mcespedes.petagram.R;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by root on 22/11/16.
@@ -51,35 +63,87 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
         mascotaViewHolder.tvNomnreCV.setText(mascota.getNombre());
         mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()));
 
+        //mascota.getUrlProfilePicture()
+
+        Picasso.with(activity)
+                .load(mascota.getImagen())
+                .placeholder(R.drawable.clipartrootwerler)
+                .into(mascotaViewHolder.imgFoto);
+
         mascotaViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Snackbar.make(v, "Hola!, mi nombre es "+mascota.getNombre(), Snackbar.LENGTH_LONG).show();
-
             }
         });
 
        mascotaViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
                 constructorMascotas.darLike(mascota);
-                mascotaViewHolder.tvPunto.setText(String.valueOf(constructorMascotas.obtenerLikes(mascota)));
+                String punto = mascotaViewHolder.tvPunto.getText().toString();
+                int punto2 = Integer.valueOf(punto) + 1;
+                mascotaViewHolder.tvPunto.setText(String.valueOf(punto2));
 
-                //mascotaViewHolder.tvPunto.setText(String.valueOf(mascota.getLikes()+instagram_api_1));
+                Log.d("ENVIANDO", "enviando");
 
-                Snackbar.make(v, "Has agregado a "+mascota.getNombre()+" a favoritos", Snackbar.LENGTH_LONG)
+                RestApiAdapter restApiAdapter = new RestApiAdapter();
+
+                EndpointsApi endpoints = restApiAdapter.establecerConexionRestApiToken();
+
+                String token = FirebaseInstanceId.getInstance().getToken();
+
+                Log.d("token",token);
+
+                Call<String> usuarioResponseCall = endpoints.setLikePhoto(token,mascota.getImagen(), ConstantesRestApi.KEY_JAFERR_91_ID);
+
+                usuarioResponseCall.enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        String usuarioResponse = response.body();
+                        Log.d("RESPUESTA  " , usuarioResponse);
+                        Toast.makeText(activity, "Has dado like a la foto !", Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Log.d("ERROR", t.getMessage());
+                    }
+                });
+
+                /*Snackbar.make(v, "Has dado like a la foto !", Snackbar.LENGTH_LONG)
                         .setAction(v.getResources().getString(R.string.texto_accion), new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                /*Intent i = new Intent(view.getContext(), FavoritosMascota.class );
-                                view.getContext().startActivity(i);*/
+
+                                Log.d("ENVIANDO", "enviando");
+
+                                RestApiAdapter restApiAdapter = new RestApiAdapter();
+
+                                EndpointsApi endpoints = restApiAdapter.establecerConexionRestApiToken();
+
+                                String token = FirebaseInstanceId.getInstance().getToken();
+
+                                Call<String> usuarioResponseCall = endpoints.setLikePhoto(token,mascota.getImagen(), ConstantesRestApi.KEY_JAFERR_91_ID);
+
+                                usuarioResponseCall.enqueue(new Callback<String>() {
+                                    @Override
+                                    public void onResponse(Call<String> call, Response<String> response) {
+                                        String usuarioResponse = response.body();
+                                        Log.d("RESPUESTA  " , usuarioResponse);
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<String> call, Throwable t) {
+                                        Log.d("ERROR", t.getMessage());
+                                    }
+                                });
+
                             }
                         })
                         .setActionTextColor(v.getResources().getColor(R.color.colorPrimary))
-                        .show();
+                        .show();*/
             }
         });
     }

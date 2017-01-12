@@ -1,18 +1,19 @@
 package py.com.mcespedes.petagram.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.ArrayList;
 
@@ -20,16 +21,12 @@ import py.com.mcespedes.petagram.R;
 import py.com.mcespedes.petagram.adaptador.PageAdapter;
 import py.com.mcespedes.petagram.fragment.PerfilFragment;
 import py.com.mcespedes.petagram.fragment.RecyclerViewFragment;
-import py.com.mcespedes.petagram.pojo.Mascota;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
-    ArrayList<Mascota> mascotas= new ArrayList<Mascota>();;
-    private RecyclerView listaMascotas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
 
         setUpViewPager();
+
+        /*String token = FirebaseInstanceId.getInstance().getToken();
+        Log.d("FIREBASE_TOKEN", token);*/
 
     }
 

@@ -6,12 +6,6 @@ package py.com.mcespedes.petagram.presentador;
 
 public interface IRecyclerViewFragmentPresenter {
 
-    public void obtenerMascotasBaseDatos();
     public void mostrarMascotasRV();
-
-
-    //public void obtenerMediosRecientesByID();
-
-    public void mostratContactosRV();
 
 }
