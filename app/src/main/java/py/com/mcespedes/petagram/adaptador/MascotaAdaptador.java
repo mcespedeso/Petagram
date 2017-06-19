@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import py.com.mcespedes.petagram.RestApi.ConstantesRestApi;
 import py.com.mcespedes.petagram.RestApi.EndpointsApi;
 import py.com.mcespedes.petagram.RestApi.adapter.RestApiAdapter;
-import py.com.mcespedes.petagram.RestApi.model.UsuarioResponse;
 import py.com.mcespedes.petagram.db.ConstructorMascotas;
 import py.com.mcespedes.petagram.pojo.Mascota;
 import py.com.mcespedes.petagram.R;
@@ -96,13 +95,13 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
 
                 Log.d("token",token);
 
-                Call<String> usuarioResponseCall = endpoints.setLikePhoto(token,mascota.getImagen(), ConstantesRestApi.KEY_JAFERR_91_ID);
+                Call<String> usuarioResponseCall = endpoints.setLikePhoto(token,mascota.getImagen(), ConstantesRestApi.KEY_INSTAGRAM_ID);
 
                 usuarioResponseCall.enqueue(new Callback<String>() {
                     @Override
                     public void onResponse(Call<String> call, Response<String> response) {
                         String usuarioResponse = response.body();
-                        Log.d("RESPUESTA  " , usuarioResponse);
+                        //Log.d("RESPUESTA  " , usuarioResponse);
                         Toast.makeText(activity, "Has dado like a la foto !", Toast.LENGTH_LONG).show();
                     }
 
@@ -125,7 +124,7 @@ public class MascotaAdaptador extends  RecyclerView.Adapter<MascotaAdaptador.Mas
 
                                 String token = FirebaseInstanceId.getInstance().getToken();
 
-                                Call<String> usuarioResponseCall = endpoints.setLikePhoto(token,mascota.getImagen(), ConstantesRestApi.KEY_JAFERR_91_ID);
+                                Call<String> usuarioResponseCall = endpoints.setLikePhoto(token,mascota.getImagen(), ConstantesRestApi.KEY_INSTAGRAM_ID);
 
                                 usuarioResponseCall.enqueue(new Callback<String>() {
                                     @Override

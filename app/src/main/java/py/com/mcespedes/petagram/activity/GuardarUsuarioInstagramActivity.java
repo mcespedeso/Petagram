@@ -2,11 +2,11 @@ package py.com.mcespedes.petagram.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -78,16 +78,15 @@ public class GuardarUsuarioInstagramActivity extends AppCompatActivity {
 
         EndpointsApi endpoints = restApiAdapter.establecerConexionRestApiToken();
 
-        SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
-        String token_device = prfs.getString("token_device", "");
+        String token_device = FirebaseInstanceId.getInstance().getToken();
 
-        Call<String> usuarioResponseCall = endpoints.registrarUsuarioInstagram(token_device, ConstantesRestApi.KEY_JAFERR_91_ID);
+        Call<String> usuarioResponseCall = endpoints.registrarUsuarioInstagram(token_device, ConstantesRestApi.KEY_INSTAGRAM_ID);
 
         usuarioResponseCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                String res = response.body();
-                Log.d("RESPUESTA    " , res);
+                int res = response.code();
+                System.out.println("el codigo de la resp. es: " + res);
             }
 
             @Override
@@ -96,6 +95,29 @@ public class GuardarUsuarioInstagramActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void enviarNotificacion(View view) {
+
+        Log.d("TOQUE_ANIMAL", "true");
+        //final UsuarioResponse usuarioResponse = new UsuarioResponse(ID_RECEPTOR, "123", ANIMAL_RECEPTOR);
+        RestApiAdapter restApiAdapter =  new RestApiAdapter();
+        EndpointsApi endponits = restApiAdapter.establecerConexionRestApiToken();
+        Call<UsuarioResponse> usuarioResponseCall = endponits.toqueAnimal("-Kn0kL3htnkB37p8frmo", "Cacho");
+        usuarioResponseCall.enqueue(new Callback<UsuarioResponse>() {
+            @Override
+            public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
+
+                int res = response.code();
+                System.out.println("el codigo de la resp. es: " + res);
+
+            }
+
+            @Override
+            public void onFailure(Call<UsuarioResponse> call, Throwable t) {
+                Toast.makeText(getBaseContext(), "Error al enviar notificacion", Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }

@@ -7,6 +7,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 /**
  * Created by mcespedes on 19/12/16.
@@ -34,6 +35,10 @@ public interface EndpointsApi {
     Call<String> setLikePhoto(@Field("id_dispositivo") String id_dispositivo,
                               @Field("id_foto_instagram") String id_foto_instagram,
                               @Field("id_usuario_instagram") String id_usuario_instagram);
+
+    @FormUrlEncoded
+    @POST(ConstantesRestApi.KEY_POST_NOTIFICATION)
+    Call<UsuarioResponse> toqueAnimal(@Field("id") String id, @Field("persona") String animal);
 
 
 }

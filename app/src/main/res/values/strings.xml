@@ -27,4 +27,5 @@
     <string name="recibirNotificaciones">Recibir Notificaciones</string>
     <string name="btn_obtener_id">Obtener ID Token</string>
     <string name="btn_guardar_cuenta_instagram">Guardar Cuenta Instagram</string>
+    <string name="texto_accion_toque">Click para abrir pantalla</string>
 </resources>

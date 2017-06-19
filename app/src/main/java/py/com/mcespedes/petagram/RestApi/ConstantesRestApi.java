@@ -24,14 +24,16 @@ public final class ConstantesRestApi {
 
     public static  final String URL_GET_USER_DATA_BY_USER_NAME = KEY_GET_RECENT_MEDIA_USER_SELF + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
-
     //access to user media recent by ID
     //https://api.instagram.com/v1/users/{user-id}/media/recent/?access_token=ACCESS-TOKEN
 
-    //JAIME ID
-    public static final String KEY_JAFERR_91_ID = "4263898228";
+    //EMILIO ID
+    //public static final String KEY_INSTAGRAM_ID = "4263898228";
 
-    public static final String KEY_GET_RECENT_MEDIA_USER_BY_ID = "users/"+KEY_JAFERR_91_ID+"/media/recent";
+    //MCESPEDESO
+    public static final String KEY_INSTAGRAM_ID = "4269478833";
+
+    public static final String KEY_GET_RECENT_MEDIA_USER_BY_ID = "users/"+ KEY_INSTAGRAM_ID +"/media/recent";
 
     public static final String URL_GET_RECENT_MEDIA_USER_BY_ID = KEY_GET_RECENT_MEDIA_USER_BY_ID + KEY_ACCESS_TOKEN + ACCESS_TOKEN;
 
@@ -43,13 +45,15 @@ public final class ConstantesRestApi {
 
     //INSTAGRAM USER REGISTER AND TOKEN ID
 
-    public static final String ROOT_HEROKU_URL = "https://young-refuge-13563.herokuapp.com";
+    public static final String ROOT_HEROKU_URL = "https://nameless-cove-99515.herokuapp.com/";
 
-    public static final String KEY_POST_USER_INSTAGRAM = "registrar-usuario/";
+    public static final String KEY_POST_USER_INSTAGRAM = "users-register/";
 
     public static final String KEY_POST_HEROKU_ID_TOKEN = "token-device/";
 
     public static final String KEY_POST_HEROKU_MEDIA_LIKE = "like-media/";
+
+    public static final String KEY_POST_NOTIFICATION = "send-notification/";
 
 
 
