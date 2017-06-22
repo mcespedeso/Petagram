@@ -55,6 +55,8 @@ public final class ConstantesRestApi {
 
     public static final String KEY_POST_NOTIFICATION = "send-notification/";
 
+    public static final String KEY_POST_FOLLOW_UNFOLLOW = "follow-unfollow/";
+
 
 
 }

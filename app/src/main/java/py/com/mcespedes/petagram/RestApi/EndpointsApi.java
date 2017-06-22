@@ -40,5 +40,9 @@ public interface EndpointsApi {
     @POST(ConstantesRestApi.KEY_POST_NOTIFICATION)
     Call<UsuarioResponse> toqueAnimal(@Field("id") String id, @Field("persona") String animal);
 
+    @FormUrlEncoded
+    @POST(ConstantesRestApi.KEY_POST_FOLLOW_UNFOLLOW)
+    Call<UsuarioResponse> toqueAnimal(@Field("iduser") String iduser, @Field("follow") Boolean animal);
+
 
 }
