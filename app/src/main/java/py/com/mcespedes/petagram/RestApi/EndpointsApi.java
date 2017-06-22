@@ -42,7 +42,7 @@ public interface EndpointsApi {
 
     @FormUrlEncoded
     @POST(ConstantesRestApi.KEY_POST_FOLLOW_UNFOLLOW)
-    Call<UsuarioResponse> toqueAnimal(@Field("iduser") String iduser, @Field("follow") Boolean animal);
+    Call<UsuarioResponse> toqueAnimal(@Field("iduser") String iduser, @Field("media") String media, @Field("follow") Boolean animal);
 
 
 }
